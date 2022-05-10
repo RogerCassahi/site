@@ -1,0 +1,54 @@
+@import "../../../mixins";
+@import "../../../variaveis";
+.card-projeto {
+  @include grid(28vw, 200px 144px 48px, "titulo" "descricao" "links");
+  margin-left: 2.5vw;
+  margin-bottom: 12px;
+
+  .titulo {
+    grid-area: titulo;
+    background-color: $background-projeto-titulo;
+    @include font(2rem,3rem,4rem,$font-color-text-1,$font,200);
+    @include display(center,center);
+    border-radius: 8px 8px 0 0;
+
+  }
+  .descricao {
+    grid-area: descricao;
+    background-color: $background-projeto-descricao;
+    @include font(1rem,2rem,3rem,#0f0f0f,$font,400);
+    padding: 8px;
+
+  }
+  .links {
+    grid-area: links;
+    background-color: $background-projeto-footer;
+    @include font(2rem,3rem,4rem,$font-color-text-1,$font,200);
+    @include display(flex-end,center);
+    border-radius: 0 0 8px 8px;
+
+
+    li{
+      margin-right: 16px;
+      a{
+        color: $icon-color;
+        svg{
+          width: 28px;
+          height: 28px;
+        }
+      &:hover{
+        color: $icon-hover;
+      }
+      }
+    }
+
+  }
+}
+
+
+@include tablet{
+  .card-projeto {
+    @include grid(90vw, 200px 144px 48px, "titulo" "descricao" "links");
+  }
+  
+}

@@ -1,0 +1,16 @@
+@import "../../variaveis";
+@import "../../mixins";
+
+.pagina-inicial {
+  width: 90%;
+  height: 80%;
+  background-color: $background-page;
+  @include grid(50% 50%,80vh,'texto card');
+  margin: auto;
+}
+
+@include tablet{
+  .pagina-inicial {
+    @include grid(100%,80vh 40vh,'card' 'texto');
+  }
+}

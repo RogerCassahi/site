@@ -1,0 +1,41 @@
+@import "../../mixins";
+@import "../../variaveis";
+.menu {
+  width: 100%;
+  background-color: $background-page;
+  height: 8rem;
+  @include display(center, center);
+  .menu-icon {
+    display: none;
+  }
+
+  nav {
+    @include width(300px, 40%, 800px);
+    margin: auto;
+    @include display(space-between, center);
+    a {
+      @include font(2rem, 3rem, 4rem, $font-color-text-1, $font, 200);
+      @include hover-nav($font-color-titles);
+    }
+  }
+}
+
+@include tablet {
+  .menu {
+    background-color: $background-projeto-footer;
+    height: 7rem;
+
+    nav {
+      a{
+        @include display(space-around,center);
+      }
+      width: 60%;
+    }
+    .menu-string {
+      display: none;
+    }
+    .menu-icon {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import "./mixins";
+
+main {
+  @include display(center, flex-start);
+  margin-top: 16px;
+}
+

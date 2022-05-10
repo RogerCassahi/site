@@ -1,0 +1,71 @@
+@import "../../../mixins";
+@import "../../../variaveis";
+
+.card-apresentacao {
+  grid-area: card;
+  width: 100%;
+  height: 100%;
+  @include display(center, center);
+
+  .card {
+    margin-top: 16px;
+    width: 60%;
+    height: 90%;
+    flex-direction: column;
+    @include display(space-between, center);
+
+    .imagem {
+      width: 100%;
+      height: 100%;
+      @include imagem("https://github.com/rogercassahi.png");
+      background-color: rebeccapurple;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .contatos {
+      width: 100%;
+      height: 80px;
+
+      ul {
+        height: 100%;
+        background-color: $background-footer-card-apresentacao;
+        @include display(space-around, center);
+        border-radius: 0 0 12px 12px;
+
+
+        li {
+          border: 1px solid $font-color-titles;
+
+          padding: 8px;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          transition: 0.5s background-color;
+          cursor: pointer;
+          @include display(center, center);
+
+          &:hover {
+            background-color: $font-color-titles;
+          }
+          a {
+            @include display(center, center);
+            svg {
+              padding: 3px;
+              border-radius: 8px;
+              fill: #d9b79a;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .card-apresentacao {
+    height: 80%;
+    .card {
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../mixins";
+@import "../../variaveis";
+
+.cards-curso {
+  width: 60vw;
+  height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+@include tablet {
+  .cards-curso {
+    width: 90vw;
+ 
+  }
+  }

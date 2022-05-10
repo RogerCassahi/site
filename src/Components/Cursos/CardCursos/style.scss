@@ -1,0 +1,50 @@
+@import "../../../mixins";
+@import "../../../variaveis";
+
+.card-curso {
+  @include grid(120px 480px, 40px 40px, "local nome" "local status");
+  margin-bottom: 16px;
+  .local,
+  .nome,
+  .status-concluido,
+  .status-andamento {
+    @include display(center, center);
+    @include font(2rem, 2.2rem, 1.6rem, $font-color-text-1, $font, 400);
+  }
+  .local {
+    background-color: $background-curso-local;
+    grid-area: local;
+  }
+  .nome {
+    background-color: $background-curso-nome;
+    grid-area: nome;
+  }
+  .status-andamento,
+  .status-concluido {
+    grid-area: status;
+  }
+  .status-concluido {
+    background-color: $background-curso-status-1;
+  }
+  .status-andamento {
+    background-color: $background-curso-status-2;
+  }
+}
+
+@include tablet {
+  .card-curso {
+    @include grid(90vw, 40px 50px 30px, "local" "nome" "status");
+    margin-bottom: 16px;
+    .local,
+    .nome,
+    .status-concluido,
+    .status-andamento {
+      @include display(center, center);
+      @include font(2rem, 2.2rem, 1.6rem, $font-color-text-1, $font, 400);
+      text-align: center;
+    }
+    
+    .local{
+      border-radius: 8px 8px 0 0;
+    }
+  }}
