@@ -8,7 +8,7 @@ export default function CardApresentacao() {
         <div className="contatos">
           <ul>
             <li>
-              <a href="http://">
+              <a href="https://www.linkedin.com/in/rogercassahi">
                 <svg
                   width="32"
                   height="32"
@@ -22,7 +22,7 @@ export default function CardApresentacao() {
               </a>
             </li>
             <li>
-              <a href="http://">
+              <a href="https://github.com/RogerCassahi/">
                 <svg
                   width="32"
                   height="32"
@@ -36,7 +36,7 @@ export default function CardApresentacao() {
               </a>
             </li>
             <li>
-              <a href="http://">
+              <a href="https://twitter.com/rogcassahi">
                 <svg
                   width="32"
                   height="26"
@@ -50,7 +50,7 @@ export default function CardApresentacao() {
               </a>
             </li>
             <li>
-              <a href="http://">
+              <a href="mailto:contatorooger@gmail.com">
                 <svg
                   width="32"
                   height="24"
